@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+
+  border-bottom: 3px solid var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+.header__logo {
+  &_icon {
+    @extend %logo;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+
+  @media screen and (min-width: 768px) {
+    gap: 45px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 80px;
+  }
+}
+
+.nav-list__link {
+  @extend %nav-links;
+}
+
+.header__btn {
+  @extend %btn;
+}

@@ -1,0 +1,142 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-black-color);
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  & .hero {
+    padding-top: 0;
+  }
+}
+
+%btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 6px;
+
+  font-family: 'Times New Roman';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+
+  color: var(--text-color);
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 2px;
+  background-color: var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 6px 9px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 11px 35px;
+  }
+
+  transition: background-color var(--time-of-animation) var(--timing-function),
+    color var(--time-of-animation) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-color);
+    color: var(--text-black-color);
+    outline: 1px solid var(--accent-color);
+  }
+}
+
+%label {
+  font-family: 'abygaerregular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 0.75;
+}
+
+%nav-links {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2.4;
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+%logo {
+  width: 64px;
+  height: 30px;
+  @media screen and (min-width: 768px) {
+    width: 81px;
+    height: 45px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 111px;
+    height: 63px;
+  }
+}
+
+// h2 {
+//   font-family: 'abygaerregular';
+//   font-weight: 400;
+// }
