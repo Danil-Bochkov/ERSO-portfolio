@@ -1,0 +1,26 @@
+.languages {
+  width: 352px;
+}
+
+.languages__label {
+  @extend %label;
+
+  margin-bottom: 60px;
+}
+
+.languages-wrap {
+}
+
+.languages-list {
+}
+
+.languages-list__item {
+}
+
+.languages-list__item > span {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.languages-decor {
+}

@@ -9,11 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -31,23 +27,36 @@
             <li class="nav-list__item"><a class="nav-list__link" href="#skills">Skills</a></li>
           </ul>
         </nav>
-        <button data-modal-open class="header__btn">Order design</button>
+        <button data-modal-open-header class="header__btn">Order design</button>
       </div>
     </header>
     <main>
-      <section>
+      <section class="hero-section">
         <div class="container hero">
-          <h1 class="hero__label">Make your brand desirable</h1>
+          <div class="hero-wrap">
+            <h1 class="hero__label">Make your brand desirable</h1>
 
-          <p class="hero__text_introduce">
-            Hi, I`m Sofia Erlikhman, aka erso Graphic and UI/UX designer
-          </p>
-          <p class="hero__text_main-message">I will help your ideas become a reality.</p>
-          <div class="hero-btn-wrap">
-            <p class="hero-btn-wrap__text">Still thinking?</p>
-            <button data-modal-open class="hero-btn-wrap__btn">Order design</button>
+            <p class="hero__text_introduce">
+              Hi, I`m Sofia Erlikhman, aka erso Graphic and UI/UX designer
+            </p>
+            <p class="hero__text_main-message">I will help your ideas become a reality.</p>
+            <div class="hero-btn-wrap">
+              <p class="hero-btn-wrap__text">Still thinking?</p>
+              <button data-modal-open-hero class="hero-btn-wrap__btn">Order design</button>
+            </div>
           </div>
         </div>
+        <picture class="hero-section__picture">
+          <source
+            srcset="./images/hero/hero-desktop.png 1x, ./images/hero/hero-desktop@2x.png 2x"
+            media="(min-width: 550px)"
+          />
+          <img
+            srcset="./images/hero/hero.png 1x, ./images/hero/hero@2x.png 2x"
+            src="./images/hero/hero.png"
+            alt="My photo"
+          />
+        </picture>
       </section>
       <section>
         <div class="container advantages">
@@ -55,7 +64,6 @@
             <li class="advantages-list__item">
               <div class="advantages-list__wrapper">
                 <h2 class="advantages-list__label">Quality</h2>
-                <img class="advantages-list__icon" src="" alt="" />
               </div>
               <p class="advantages-list__text">
                 I find quality the most important aspect of the work. My goal is to help you add
@@ -66,7 +74,6 @@
             <li class="advantages-list__item">
               <div class="advantages-list__wrapper">
                 <h2 class="advantages-list__label">Support</h2>
-                <img class="advantages-list__icon" src="" alt="" />
               </div>
               <p class="advantages-list__text">
                 Working hand-in-hand with you requires constant contact to achieve the best result.
@@ -77,7 +84,6 @@
             <li class="advantages-list__item">
               <div class="advantages-list__wrapper">
                 <h2 class="advantages-list__label">Ethics</h2>
-                <img class="advantages-list__icon" src="" alt="" />
               </div>
               <p class="advantages-list__text">
                 Nowadays, designers have influence. That`s why it is so important to stay ethical
@@ -88,25 +94,80 @@
           </ul>
         </div>
       </section>
-      <section id="about-me">
+      <section id="about-me" class="about-me-section">
         <div class="container about-me">
-          <img class="about-me__pic" src="" alt="" />
-          <h2 class="about-me__label">About me</h2>
-          <p class="about-me__text">
-            I have been studying graphic design at the Kharkiv State Academy of Design and Fine Arts
-            since 2019. For one semester, I have been studying abroad at Hochschule RheinMain.
-            Additionally, I am studying computer science to provide a better design solution for the
-            website. You may consider me a “forever student” and maybe you are right. But I am eager
-            to put all my knowledge to use in your future project. Reach out to me to connect!
-          </p>
-          <div>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+          <div class="about-me-info-wrap">
+            <h2 class="about-me__label">About me</h2>
+            <picture>
+              <source
+                srcset="
+                  ./images/about-me/about-me-desktop.png    1x,
+                  ./images/about-me/about-me-desktop@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <img
+                class="about-me__pic"
+                srcset="./images/about-me/about-me.png 1x, ./images/about-me/about-me@2x.png 2x"
+                src="./images/about-me/about-me.png"
+                alt="My photo"
+              />
+            </picture>
+            <div>
+              <h2 class="about-me__label--desktop">About me</h2>
+              <p class="about-me__text">
+                I have been studying graphic design at the Kharkiv State Academy of Design and Fine
+                Arts since 2019. For one semester, I have been studying abroad at Hochschule
+                RheinMain. Additionally, I am studying computer science to provide a better design
+                solution for the website. You may consider me a “forever student” and maybe you are
+                right. But I am eager to put all my knowledge to use in your future project. Reach
+                out to me to connect!
+              </p>
+            </div>
+          </div>
+
+          <div class="about-me-links-wrap">
+            <ul class="about-me-links-list">
+              <li class="about-me-links-list__item">
+                <a class="about-me-links-list__link" href="tel:+491712147996"
+                  ><img
+                    class="about-me-links-list__icon"
+                    src="./images/icons/tel.svg"
+                    alt="phone icon"
+                  />
+                  <span class="about-me-links-list__text">+491712147996</span></a
+                >
+              </li>
+              <li class="about-me-links-list__item">
+                <a class="about-me-links-list__link" href="https://www.instagram.com/erso.exe/"
+                  ><img
+                    class="about-me-links-list__icon"
+                    src="./images/icons/insta.svg"
+                    alt="instagram icon"
+                  />
+                  <span class="about-me-links-list__text">@erso.exe</span></a
+                >
+              </li>
+              <li class="about-me-links-list__item">
+                <a class="about-me-links-list__link" href="https://www.behance.net/"
+                  ><img
+                    class="about-me-links-list__icon"
+                    src="./images/icons/behance.svg"
+                    alt="behance icon"
+                  />
+                  <span class="about-me-links-list__text">behance.net</span></a
+                >
+              </li>
+              <li class="about-me-links-list__item">
+                <a class="about-me-links-list__link" href="mailto:sofiaerlikhman@gmail.com"
+                  ><img
+                    class="about-me-links-list__icon"
+                    src="./images/icons/gmail.svg"
+                    alt="gmail icon"
+                  />
+                  <span class="about-me-links-list__text">sofiaerlikhman@gmail.com</span></a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -116,74 +177,259 @@
           <h2 class="portfolio__label">Portfolio</h2>
           <div class="portfolio-list-wrap">
             <ul class="portfolio-list">
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-1-desktop.png    1x,
+                      ./images/portfolio/project-1-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-1.png    1x,
+                      ./images/portfolio/project-1@2x.png 2x
+                    "
+                    src="./images/portfolio/project-1.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-2-desktop.png    1x,
+                      ./images/portfolio/project-2-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-2.png    1x,
+                      ./images/portfolio/project-2@2x.png 2x
+                    "
+                    src="./images/portfolio/project-2.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-3-desktop.png    1x,
+                      ./images/portfolio/project-3-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-3.png    1x,
+                      ./images/portfolio/project-3@2x.png 2x
+                    "
+                    src="./images/portfolio/project-3.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-4-desktop.png    1x,
+                      ./images/portfolio/project-4-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-4.png    1x,
+                      ./images/portfolio/project-4@2x.png 2x
+                    "
+                    src="./images/portfolio/project-4.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-5-desktop.png    1x,
+                      ./images/portfolio/project-5-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-5.png    1x,
+                      ./images/portfolio/project-5@2x.png 2x
+                    "
+                    src="./images/portfolio/project-5.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-6-desktop.png    1x,
+                      ./images/portfolio/project-6-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-6.png    1x,
+                      ./images/portfolio/project-6@2x.png 2x
+                    "
+                    src="./images/portfolio/project-6.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-7-desktop.png    1x,
+                      ./images/portfolio/project-7-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-7.png    1x,
+                      ./images/portfolio/project-7@2x.png 2x
+                    "
+                    src="./images/portfolio/project-7.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-8-desktop.png    1x,
+                      ./images/portfolio/project-8-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-8.png    1x,
+                      ./images/portfolio/project-8@2x.png 2x
+                    "
+                    src="./images/portfolio/project-8.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
-              <li class="portfolio__item">
-                <img class="portfolio__pic" src="" alt="" />
+              <li class="portfolio-list__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-9-desktop.png    1x,
+                      ./images/portfolio/project-9-desktop@2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="portfolio-list__pic"
+                    srcset="
+                      ./images/portfolio/project-9.png    1x,
+                      ./images/portfolio/project-9@2x.png 2x
+                    "
+                    src="./images/portfolio/project-9.png"
+                    alt="project image"
+                  />
+                </picture>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <div class="skills-wrap" id="skills">
+      <div class="skills-wrap container" id="skills">
         <section>
-          <div class="container hard-skills">
+          <div class="hard-skills">
             <h2 class="hard-skills__label">Hard skills</h2>
             <ul class="hard-skills-list">
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/Ai.png"
+                  alt="adobe illustrator icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/Id.png"
+                  alt="adobe indesign icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/Ps.png"
+                  alt="adobe photoshop icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/html.png"
+                  alt="html icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/figma.png"
+                  alt="figma icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img class="hard-skills-list__icon" src="./images/skills/css.png" alt="css icon" />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/Ae.png"
+                  alt="adobe after effect icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/fontlab.png"
+                  alt="fontlab icon"
+                />
               </li>
               <li class="hard-skills-list__item">
-                <img class="hard-skills-list__icon" src="" alt="" />
+                <img
+                  class="hard-skills-list__icon"
+                  src="./images/skills/Pr.png"
+                  alt="adobe premiere icon"
+                />
               </li>
             </ul>
           </div>
         </section>
         <section>
-          <div class="container languages">
+          <div class="languages">
             <h2 class="languages__label">Languages</h2>
             <div class="languages-wrap">
               <ul class="languages-list">
@@ -198,7 +444,7 @@
           </div>
         </section>
         <section>
-          <div class="container soft-skills">
+          <div class="soft-skills">
             <h2 class="soft-skills__label">Soft skills</h2>
             <div class="soft-skills-wrap">
               <ul class="soft-skills-list">
@@ -261,7 +507,7 @@
               <a class="footer-nav-list__link" href="#skills">Skills</a>
             </li>
           </ul>
-          <button data-modal-open class="footer-nav__btn">Order design</button>
+          <button data-modal-open-footer class="footer-nav__btn">Order design</button>
         </div>
         <div class="footer-socials">
           <p class="footer-socials__privacy">&copy; Erlikhman Sofia 2022</p>

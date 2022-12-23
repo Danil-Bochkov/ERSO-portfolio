@@ -1,11 +1,15 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
+    openModalBtnHeader: document.querySelector("[data-modal-open-header]"),
+    openModalBtnHero: document.querySelector("[data-modal-open-hero]"),
+    openModalBtnFooter: document.querySelector("[data-modal-open-footer]"),
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtnHeader.addEventListener("click", toggleModal);
+  refs.openModalBtnHero.addEventListener("click", toggleModal);
+  refs.openModalBtnFooter.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   document.addEventListener("keydown", (event) => {

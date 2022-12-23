@@ -1,0 +1,116 @@
+.hero-section {
+  background: linear-gradient(179.91deg, #2f2b30 0.08%, #343236 92.67%),
+    url(../images/hero/hero.png);
+}
+
+.hero-section__picture {
+  position: relative;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+.hero {
+  position: relative;
+  color: var(--text-color);
+  z-index: 100;
+}
+
+.hero-wrap {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: calc(80px + (110 - 80) * ((100vw - 768px) / (1199 - 768)));
+  }
+  @media screen and (min-width: 1200px) {
+    top: calc(100px + (170 - 100) * ((100vw - 1200px) / (1920 - 1200)));
+  }
+}
+
+.hero__label {
+  @extend %label;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    font-size: calc(38px + (45 - 38) * ((100vw - 768px) / (1199 - 768)));
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 57px;
+  }
+}
+
+.hero__text_introduce {
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 400px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 600px;
+    font-size: 32px;
+  }
+}
+
+.hero__text_main-message {
+  font-size: 16px;
+  line-height: 1.125;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+.hero-btn-wrap {
+  margin-top: 50px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.hero-btn-wrap__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.125;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+.hero-btn-wrap__btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+
+  padding: 11px 35px 11px 35px;
+  border-radius: 6px;
+
+  @media screen and (min-width: 768px) {
+    width: 160px;
+    border-radius: 4px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 22px;
+    width: 220px;
+  }
+  @extend %btn;
+}
