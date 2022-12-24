@@ -1,5 +1,11 @@
 .hard-skills {
   width: 352px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .hard-skills__label {

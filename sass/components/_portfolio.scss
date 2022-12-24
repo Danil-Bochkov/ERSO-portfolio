@@ -30,8 +30,8 @@
     height: calc(300px + (320 - 300) * ((100vw - 768px) / (1199 - 768)));
   }
   @media screen and (min-width: 1200px) {
-    width: calc(760px + (925 - 760) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(500px + (600 - 500) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(670px + (730 - 670) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(380px + (410 - 380) * ((100vw - 1200px) / (1920 - 1200)));
   }
 }
 
@@ -67,6 +67,8 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 60px;
   }
 }
 /* Стрелка влево */
@@ -83,7 +85,7 @@
     left: 8px;
   }
   @media screen and (min-width: 1366px) {
-    left: 60px;
+    left: 14px;
   }
 }
 /* Стрелка вправо */
@@ -100,6 +102,6 @@
     right: 8px;
   }
   @media screen and (min-width: 1366px) {
-    right: 60px;
+    right: 14px;
   }
 }

@@ -138,9 +138,14 @@ section .advantages {
   font-size: 14px;
   line-height: 2.4;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-nav-list__link, .nav-list__link {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav-list__link, .nav-list__link {
+    font-size: 20px;
   }
 }
 
@@ -244,6 +249,11 @@ label {
   position: relative;
   z-index: 10;
 }
+@media screen and (max-width: 550px) {
+  .hero-section__picture {
+    margin-top: -80px;
+  }
+}
 .hero {
   position: relative;
   color: var(--text-color);
@@ -309,11 +319,13 @@ label {
   margin-bottom: -20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero-btn-wrap {
     flex-direction: column;
     gap: 15px;
+    align-items: flex-start;
   }
 }
 
@@ -488,6 +500,7 @@ label {
 .about-me__pic {
   position: relative;
   z-index: 40;
+  border-radius: 15px;
 }
 @media screen and (min-width: 768px) {
   .about-me__pic {
@@ -610,8 +623,8 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .portfolio-list__pic {
-    width: calc(760px + 165 * (100vw - 1200px) / 720);
-    height: calc(500px + 100 * (100vw - 1200px) / 720);
+    width: calc(670px + 60 * (100vw - 1200px) / 720);
+    height: calc(380px + 30 * (100vw - 1200px) / 720);
   }
 }
 
@@ -643,6 +656,13 @@ label {
     height: 40px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .portfolio-list .slick-arrow {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 /* Стрелка влево */
 .portfolio-list .slick-arrow.slick-prev {
   background-color: inherit;
@@ -663,7 +683,7 @@ label {
 }
 @media screen and (min-width: 1366px) {
   .portfolio-list .slick-arrow.slick-prev {
-    left: 60px;
+    left: 14px;
   }
 }
 
@@ -687,14 +707,13 @@ label {
 }
 @media screen and (min-width: 1366px) {
   .portfolio-list .slick-arrow.slick-next {
-    right: 60px;
+    right: 14px;
   }
 }
 
 .hard-skills {
   width: 352px;
 }
-
 .hard-skills__label {
   margin-bottom: 60px;
 }
@@ -1044,6 +1063,10 @@ label {
   .field__input[type=text], .field__input[type=email], .field__textarea[type=text] {
     font-size: 24px;
   }
+}
+
+.footer-section {
+  padding: 40px 0;
 }
 
 .footer-nav {

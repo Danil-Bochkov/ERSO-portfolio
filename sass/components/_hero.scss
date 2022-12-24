@@ -7,6 +7,10 @@
   position: relative;
   z-index: 10;
 
+  @media screen and (max-width: 550px) {
+    margin-top: -80px;
+  }
+
   @media screen and (min-width: 768px) {
   }
 
@@ -34,6 +38,7 @@
   @extend %label;
 
   margin-bottom: 30px;
+  // font-size: calc(30px + (38 - 30) * ((100vw - 370px) / (550 - 370)));
 
   @media screen and (min-width: 768px) {
     font-size: calc(38px + (45 - 38) * ((100vw - 768px) / (1199 - 768)));
@@ -74,10 +79,11 @@
   margin-bottom: -20px;
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   @media screen and (min-width: 768px) {
     flex-direction: column;
     gap: 15px;
+    align-items: flex-start;
   }
 }
 

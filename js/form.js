@@ -23,3 +23,12 @@ function sendEmail() {
         status.style.display = 'block';
     }).catch((err) => {console.log(err)})
 }
+
+// const EMAIL_REGEXP = '/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu';
+// const emailInput = document.getElementById('email');
+
+// function validateEmail(value) {
+//   return EMAIL_REGEXP.test(value);
+// }
+
+// emailInput.addEventListener('input', validateEmail);
