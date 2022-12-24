@@ -10,6 +10,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    padding: 10px calc(15px + (200 - 15) * ((100vw - 1200px) / (1920 - 1200)));
   }
 }
 

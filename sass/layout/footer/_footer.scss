@@ -1,13 +1,18 @@
-.footer-section {
-  padding: 40px 0;
+.footer {
+  color: var(--text-color);
+  background-color: var(--bg-black-color);
+  padding: 40px 15px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 calc(15px + (200 - 15) * ((100vw - 1200px) / (1920 - 1200)));
+  }
 }
 
 .footer-nav {
-  background-color: var(--bg-black-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding-bottom: 20px;
 
   border-bottom: 3px solid var(--accent-color);
 }
@@ -41,11 +46,9 @@
 }
 
 .footer-socials {
-  color: var(--text-color);
-  background-color: var(--bg-black-color);
   display: flex;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding-top: 20px;
 
   &__privacy {
     font-weight: 300;
