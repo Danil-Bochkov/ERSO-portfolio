@@ -72,6 +72,7 @@ section .advantages {
 }
 @media screen and (min-width: 1200px) {
   .skills-wrap {
+    display: flex;
     justify-content: space-between;
   }
 }
@@ -717,9 +718,34 @@ label {
   margin-bottom: 60px;
 }
 
+.languages-wrap {
+  position: relative;
+  height: 352px;
+}
+
+.languages-list {
+  width: 160px;
+  text-align: end;
+}
+
+.languages-list__item {
+  padding-bottom: 21px;
+}
+
 .languages-list__item > span {
   font-size: 16px;
-  line-height: 2;
+}
+
+.languages-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/icons/lang-vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 352px;
+  height: 352px;
 }
 
 .soft-skills {
@@ -833,6 +859,7 @@ label {
   transition: transform var(--time-of-animation) var(--timing-function);
   padding: 110px 80px;
   max-width: 370px;
+  height: 458px;
 }
 .modal__label {
   text-align: center;
@@ -860,12 +887,14 @@ label {
   .modal {
     padding: 120px 100px;
     max-width: 420px;
+    height: 530px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     padding: 125px 110px;
     max-width: 528px;
+    height: 617px;
   }
 }
 
@@ -911,6 +940,24 @@ label {
     width: 100%;
     font-size: 24px;
     line-height: 1.16;
+  }
+}
+
+.modal-form-message {
+  display: none;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 270px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .modal-form-message {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form-message {
+    font-size: 24px;
   }
 }
 

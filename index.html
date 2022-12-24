@@ -9,7 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
     />
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('WtUcJd9CZ4zPjsuiV');
+      })();
+    </script>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -432,6 +440,7 @@
           <div class="languages">
             <h2 class="languages__label">Languages</h2>
             <div class="languages-wrap">
+              <div class="languages-decor"></div>
               <ul class="languages-list">
                 <li class="languages-list__item"><span>Ukrainian - native</span></li>
                 <li class="languages-list__item"><span>Russian - native</span></li>
@@ -439,7 +448,6 @@
                 <li class="languages-list__item"><span>French - B2</span></li>
                 <li class="languages-list__item"><span>German - B1</span></li>
               </ul>
-              <div class="languages-decor"></div>
             </div>
           </div>
         </section>
@@ -516,23 +524,39 @@
             <span class="social-links-wrap__label">Contacts:</span>
             <ul class="social-links-list">
               <li class="social-links-list__item">
-                <a class="social-links-list__link" href="">
-                  <img class="social-links-list__icon" src="./images/icons/tel.svg" alt="" />
+                <a class="social-links-list__link" href="tel:+491712147996">
+                  <img
+                    class="social-links-list__icon"
+                    src="./images/icons/tel.svg"
+                    alt="phone icon"
+                  />
                 </a>
               </li>
               <li class="social-links-list__item">
-                <a class="social-links-list__link" href="">
-                  <img class="social-links-list__icon" src="./images/icons/insta.svg" alt="" />
+                <a class="social-links-list__link" href="https://www.instagram.com/erso.exe/">
+                  <img
+                    class="social-links-list__icon"
+                    src="./images/icons/insta.svg"
+                    alt="instagram icon"
+                  />
                 </a>
               </li>
               <li class="social-links-list__item">
-                <a class="social-links-list__link" href="">
-                  <img class="social-links-list__icon" src="./images/icons/behance.svg" alt="" />
+                <a class="social-links-list__link" href="https://www.behance.net/">
+                  <img
+                    class="social-links-list__icon"
+                    src="./images/icons/behance.svg"
+                    alt="behance icon"
+                  />
                 </a>
               </li>
               <li class="social-links-list__item">
-                <a class="social-links-list__link" href="">
-                  <img class="social-links-list__icon" src="./images/icons/gmail.svg" alt="" />
+                <a class="social-links-list__link" href="mailto:sofiaerlikhman@gmail.com">
+                  <img
+                    class="social-links-list__icon"
+                    src="./images/icons/gmail.svg"
+                    alt="gmail icon"
+                  />
                 </a>
               </li>
             </ul>
@@ -544,13 +568,17 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn-close" data-modal-close>
-          <img class="modal-btn-close__icon" src="./images/icons/close-btn-icon.svg" alt="" />
+          <img
+            class="modal-btn-close__icon"
+            src="./images/icons/close-btn-icon.svg"
+            alt="close button icon"
+          />
         </button>
-        <h2 class="modal__label">Order design</h2>
-        <form action="" class="modal-form">
+        <h2 id="form-label" class="modal__label">Order design</h2>
+        <form class="modal-form" id="my-form">
           <div class="field">
             <label class="field__label" for="name"> Enter your name </label>
-            <input class="field__input" type="text" id="name" required />
+            <input class="field__input" type="text" id="name" />
           </div>
           <div class="field">
             <label class="field__label" for="email"> Enter your e-mail </label>
@@ -567,8 +595,11 @@
               cols="30"
             ></textarea>
           </div>
-          <button type="submit" class="modal-form__btn">Send</button>
+          <button type="submit" class="modal-form__btn" onclick="sendEmail()">Send</button>
         </form>
+        <div class="modal-form-message" id="modal-form-status">
+          The first step towards your design is done. I`ll reach out to you as soon as possible.
+        </div>
       </div>
     </div>
 
