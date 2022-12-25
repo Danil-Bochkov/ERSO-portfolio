@@ -38,7 +38,9 @@
   @extend %label;
 
   margin-bottom: 30px;
-  // font-size: calc(30px + (38 - 30) * ((100vw - 370px) / (550 - 370)));
+  @media screen and (max-width: 435px) {
+    font-size: 30px;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: calc(38px + (45 - 38) * ((100vw - 768px) / (1199 - 768)));
@@ -56,6 +58,10 @@
 
   margin-bottom: 15px;
 
+  @media screen and (max-width: 435px) {
+    font-size: 19px;
+  }
+
   @media screen and (min-width: 768px) {
     max-width: 400px;
   }
@@ -68,6 +74,10 @@
 .hero__text_main-message {
   font-size: 16px;
   line-height: 1.125;
+
+  @media screen and (max-width: 435px) {
+    font-size: 14px;
+  }
 
   @media screen and (min-width: 1200px) {
     font-size: 20px;
