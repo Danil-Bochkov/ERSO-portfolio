@@ -70,10 +70,23 @@ section .advantages {
 .skills-wrap {
   display: block;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .skills-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-position {
+    justify-content: center;
+    display: flex;
   }
 }
 
@@ -732,9 +745,12 @@ label {
   }
 }
 
-.hard-skills {
-  width: 352px;
+@media screen and (min-width: 768px) {
+  .hard-skills {
+    width: 352px;
+  }
 }
+
 .hard-skills__label {
   margin-bottom: 60px;
 }
@@ -750,8 +766,10 @@ label {
   height: 105.68px;
 }
 
-.languages {
-  width: 352px;
+@media screen and (min-width: 768px) {
+  .languages {
+    width: 352px;
+  }
 }
 
 .languages__label {
@@ -770,6 +788,17 @@ label {
 
 .languages-list__item {
   padding-bottom: 21px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 369px) {
+  .languages-list__item {
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 450px) {
+  .languages-list__item {
+    padding-bottom: calc(19px + 2 * (100vw - 370px) / 80);
+  }
 }
 
 .languages-list__item > span {
@@ -777,9 +806,8 @@ label {
 }
 
 .languages-decor {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
+  position: relative;
   background-image: url(../images/icons/lang-vector.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -787,9 +815,28 @@ label {
   width: 352px;
   height: 352px;
 }
+@media screen and (max-width: 369px) {
+  .languages-decor {
+    width: 312px;
+    height: 312px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 450px) {
+  .languages-decor {
+    width: calc(332px + 20 * (100vw - 370px) / 80);
+    height: calc(332px + 20 * (100vw - 370px) / 80);
+  }
+}
 
-.soft-skills {
-  width: 352px;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .soft-skills {
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .soft-skills {
+    width: 352px;
+  }
 }
 
 .soft-skills__label {
@@ -800,6 +847,13 @@ label {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .soft-skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 .soft-skills-list__item:nth-child(1) > .field-info::after {
@@ -1093,7 +1147,7 @@ label {
 }
 @media screen and (min-width: 1200px) {
   .footer {
-    padding: 0 calc(15px + 185 * (100vw - 1200px) / 720);
+    padding: 40px calc(15px + 185 * (100vw - 1200px) / 720);
   }
 }
 

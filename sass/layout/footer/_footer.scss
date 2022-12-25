@@ -4,7 +4,7 @@
   padding: 40px 15px;
 
   @media screen and (min-width: 1200px) {
-    padding: 0 calc(15px + (200 - 15) * ((100vw - 1200px) / (1920 - 1200)));
+    padding: 40px calc(15px + (200 - 15) * ((100vw - 1200px) / (1920 - 1200)));
   }
 }
 

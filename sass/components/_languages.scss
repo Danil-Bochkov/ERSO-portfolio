@@ -1,5 +1,7 @@
 .languages {
-  width: 352px;
+  @media screen and (min-width: 768px) {
+    width: 352px;
+  }
 }
 
 .languages__label {
@@ -20,6 +22,15 @@
 
 .languages-list__item {
   padding-bottom: 21px;
+  padding-right: 10px;
+
+  @media screen and (max-width: 369px) {
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 450px) {
+    padding-bottom: calc(19px + (21 - 19) * (100vw - 370px) / (450 - 370));
+  }
 }
 
 .languages-list__item > span {
@@ -30,13 +41,22 @@
 }
 
 .languages-decor {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
+  position: relative;
   background-image: url(../images/icons/lang-vector.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 352px;
   height: 352px;
+
+  @media screen and (max-width: 369px) {
+    width: 312px;
+    height: 312px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 450px) {
+    width: calc(332px + (352 - 332) * (100vw - 370px) / (450 - 370));
+    height: calc(332px + (352 - 332) * (100vw - 370px) / (450 - 370));
+  }
 }

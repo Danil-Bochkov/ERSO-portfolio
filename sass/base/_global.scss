@@ -69,11 +69,20 @@ section {
   display: block;
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.mobile-position {
+  @media screen and (max-width: 767px) {
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
   }
 }
 
