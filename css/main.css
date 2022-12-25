@@ -238,7 +238,7 @@ label {
   padding: 10px 15px;
   background-color: var(--bg-color);
   position: relative;
-  z-index: 1000;
+  z-index: 700;
   border-bottom: 3px solid var(--accent-color);
 }
 @media screen and (min-width: 1200px) {
@@ -269,11 +269,16 @@ label {
 .hero-section__picture {
   position: relative;
   z-index: 10;
-  margin-top: calc(0px - 30 * (100vw - 320px) / 190);
+  margin-top: calc(-75px - 135 * (100vw - 360px) / 150);
 }
 @media screen and (min-width: 510px) and (max-width: 767px) {
   .hero-section__picture {
     margin-top: calc(0px - 150 * (100vw - 510px) / 257);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section__picture {
+    margin-top: 0px;
   }
 }
 .hero {

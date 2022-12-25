@@ -7,14 +7,14 @@
   position: relative;
   z-index: 10;
 
-  margin-top: calc(0px - (30 - 0) * ((100vw - 320px) / (510 - 320)));
+  margin-top: calc(-75px - (210 - 75) * ((100vw - 360px) / (510 - 360)));
 
   @media screen and (min-width: 510px) and (max-width: 767px) {
-    // calc(140px + (180 - 140) * ((100vw - 768px) / (1199 - 768)))
     margin-top: calc(0px - (150 - 0) * ((100vw - 510px) / (767 - 510)));
   }
 
   @media screen and (min-width: 768px) {
+    margin-top: 0px;
   }
 
   @media screen and (min-width: 1200px) {
