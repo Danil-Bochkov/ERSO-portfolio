@@ -608,7 +608,7 @@
         <form class="modal-form" id="my-form">
           <div class="field">
             <label class="field__label" for="name"> Enter your name </label>
-            <input class="field__input" type="text" id="name" />
+            <input class="field__input" type="text" id="name" required autocomplete="off" />
           </div>
           <div class="field">
             <label class="field__label" for="email"> Enter your e-mail </label>
@@ -625,7 +625,7 @@
               cols="30"
             ></textarea>
           </div>
-          <button type="submit" class="modal-form__btn" onclick="sendEmail()">Send</button>
+          <button type="submit" class="modal-form__btn">Send</button>
         </form>
         <div class="modal-form-message" id="modal-form-status">
           The first step towards your design is done. I`ll reach out to you as soon as possible.

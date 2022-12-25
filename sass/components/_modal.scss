@@ -37,20 +37,16 @@
 
   transition: transform var(--time-of-animation) var(--timing-function);
 
-  padding: 110px 80px;
-  max-width: 370px;
-  height: 458px;
+  padding: 55px 40px;
+  max-width: max-content;
+  height: fit-content;
 
   @media screen and (min-width: 768px) {
-    padding: 120px 100px;
-    max-width: 420px;
-    height: 530px;
+    padding: 80px 80px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 125px 110px;
-    max-width: 528px;
-    height: 617px;
+    padding: 80px 100px;
   }
 }
 
