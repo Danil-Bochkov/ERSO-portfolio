@@ -28,7 +28,8 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: 100%;
+  width: 90%;
+  padding: 0;
 
   @media screen and (min-width: 768px) {
     top: calc(140px + (180 - 140) * ((100vw - 768px) / (1199 - 768)));
@@ -45,8 +46,12 @@
   @extend %label;
 
   margin-bottom: 30px;
-  @media screen and (max-width: 435px) {
-    font-size: 30px;
+  @media screen and (max-width: 434.98px) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: 435px) and (max-width: 450px) {
+    font-size: 34px;
   }
 
   @media screen and (min-width: 768px) {
@@ -66,6 +71,7 @@
   margin-bottom: 15px;
 
   @media screen and (max-width: 435px) {
+    width: 300px;
     font-size: 19px;
   }
 

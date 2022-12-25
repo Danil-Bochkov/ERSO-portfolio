@@ -288,7 +288,8 @@ label {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: 100%;
+  width: 90%;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -304,9 +305,14 @@ label {
 .hero__label {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 434.98px) {
   .hero__label {
-    font-size: 30px;
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 435px) and (max-width: 450px) {
+  .hero__label {
+    font-size: 34px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -328,6 +334,7 @@ label {
 }
 @media screen and (max-width: 435px) {
   .hero__text_introduce {
+    width: 300px;
     font-size: 19px;
   }
 }
