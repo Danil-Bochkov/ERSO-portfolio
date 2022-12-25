@@ -7,8 +7,11 @@
   position: relative;
   z-index: 10;
 
-  @media screen and (max-width: 550px) {
-    margin-top: -80px;
+  margin-top: calc(0px - (30 - 0) * ((100vw - 320px) / (510 - 320)));
+
+  @media screen and (min-width: 510px) and (max-width: 767px) {
+    // calc(140px + (180 - 140) * ((100vw - 768px) / (1199 - 768)))
+    margin-top: calc(0px - (150 - 0) * ((100vw - 510px) / (767 - 510)));
   }
 
   @media screen and (min-width: 768px) {
@@ -19,19 +22,23 @@
 }
 
 .hero {
-  position: relative;
+  position: absolute;
   color: var(--text-color);
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    top: calc(140px + (180 - 140) * ((100vw - 768px) / (1199 - 768)));
+  }
+  @media screen and (min-width: 1200px) {
+    top: calc(205px + (280 - 205) * ((100vw - 1200px) / (1920 - 1200)));
+  }
 }
 
 .hero-wrap {
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: calc(80px + (110 - 80) * ((100vw - 768px) / (1199 - 768)));
-  }
-  @media screen and (min-width: 1200px) {
-    top: calc(100px + (170 - 100) * ((100vw - 1200px) / (1920 - 1200)));
-  }
 }
 
 .hero__label {

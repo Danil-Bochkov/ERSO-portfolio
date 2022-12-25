@@ -56,7 +56,6 @@ section {
 }
 section.hero-section {
   padding-bottom: 0;
-  padding-top: 80px;
 }
 @media screen and (min-width: 768px) {
   section.hero-section {
@@ -237,6 +236,9 @@ label {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  background-color: var(--bg-color);
+  position: relative;
+  z-index: 1000;
   border-bottom: 3px solid var(--accent-color);
 }
 @media screen and (min-width: 1200px) {
@@ -267,27 +269,30 @@ label {
 .hero-section__picture {
   position: relative;
   z-index: 10;
+  margin-top: calc(0px - 30 * (100vw - 320px) / 190);
 }
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 510px) and (max-width: 767px) {
   .hero-section__picture {
-    margin-top: -80px;
+    margin-top: calc(0px - 150 * (100vw - 510px) / 257);
   }
 }
 .hero {
-  position: relative;
+  position: absolute;
   color: var(--text-color);
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
+  width: 100%;
 }
-
 @media screen and (min-width: 768px) {
-  .hero-wrap {
-    position: absolute;
-    top: calc(80px + 30 * (100vw - 768px) / 431);
+  .hero {
+    top: calc(140px + 40 * (100vw - 768px) / 431);
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero-wrap {
-    top: calc(100px + 70 * (100vw - 1200px) / 720);
+  .hero {
+    top: calc(205px + 75 * (100vw - 1200px) / 720);
   }
 }
 
