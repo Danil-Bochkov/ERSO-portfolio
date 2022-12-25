@@ -656,8 +656,8 @@ label {
 .portfolio-list__pic {
   margin: 0 auto;
   border-radius: 15px;
-  width: calc(256px + 114 * (100vw - 320px) / 448);
-  height: calc(143px + 62 * (100vw - 320px) / 448);
+  width: calc(256px + 114 * (100vw - 320px) / 447);
+  height: calc(143px + 62 * (100vw - 320px) / 447);
 }
 @media screen and (min-width: 768px) {
   .portfolio-list__pic {

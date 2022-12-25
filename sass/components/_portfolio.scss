@@ -22,8 +22,8 @@
   margin: 0 auto;
   border-radius: 15px;
 
-  width: calc(256px + (370 - 256) * ((100vw - 320px) / (768 - 320)));
-  height: calc(143px + (205 - 143) * ((100vw - 320px) / (768 - 320)));
+  width: calc(256px + (370 - 256) * ((100vw - 320px) / (767 - 320)));
+  height: calc(143px + (205 - 143) * ((100vw - 320px) / (767 - 320)));
 
   @media screen and (min-width: 768px) {
     width: calc(480px + (490 - 480) * ((100vw - 768px) / (1199 - 768)));
