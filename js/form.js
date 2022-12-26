@@ -1,5 +1,5 @@
-const serviceID = 'service_0buwcqq';
-const templateID = 'template_hqbmunp';
+const serviceID = 'service_j5vrycb';
+const templateID = 'template_l7x18zd';
 const form = document.getElementById('my-form');
 
 form.addEventListener("submit", handleSubmit);
